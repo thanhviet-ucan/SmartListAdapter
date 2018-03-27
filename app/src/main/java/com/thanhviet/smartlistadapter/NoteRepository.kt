@@ -13,10 +13,17 @@ class NoteRepository {
       Note(6, "Play football")
   )
 
+  private var dataNew = mutableListOf<Note>(
+      Note(1, "Tom is new friend"),
+      Note(2, "Must married"),
+      Note(3, "Kiss a new friend"),
+      Note(4, "Sleep"),
+      Note(5, "Enjoy new car"),
+      Note(6, "Buy a big house")
+  )
+
   val instanceData: MutableList<Note> get() = data
 
-  val dataUpdate: MutableList<Note> get() {
-    data.set(3, Note(3, "Do morning exercise"))
-    return data
-  }
+  val dataUpdate: MutableList<Note> get() = dataNew
+//    data.set(3, Note(3, "Do morning exercise"))
 }
