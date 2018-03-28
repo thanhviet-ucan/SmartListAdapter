@@ -3,4 +3,4 @@ ListAdapter is a new class bundled in the 27.1.0 support library and simplifies 
 
 ## Preview - Video Demo
 
-[![Demo Using ListAdapter for RecyclerView in android support version latest by Kotlin](https://github.com/mrmike/DiffUtil-sample/blob/master/raw/preview-smart-listadapter.png)](https://www.youtube.com/watch?v=UCTQ0kWDObE)
+[![Demo Using ListAdapter for RecyclerView in android support version latest by Kotlin](https://github.com/mrmike/DiffUtil-sample/blob/develop/raw/preview-smart-listadapter.png?raw=true)](https://www.youtube.com/watch?v=UCTQ0kWDObE)
