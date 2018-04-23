@@ -1,9 +1,7 @@
 package com.thanhviet.smartlistadapter
 
-import android.support.v7.recyclerview.extensions.AsyncDifferConfig
-import android.support.v7.recyclerview.extensions.AsyncListDiffer
+import android.os.SystemClock
 import android.support.v7.recyclerview.extensions.ListAdapter
-import android.support.v7.util.AdapterListUpdateCallback
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -32,7 +30,17 @@ class NoteAdapter(
 
     fun bindData(note: Note, clickListener: (Int) -> Unit) {
       title.text = note.title
-      trash.setOnClickListener { clickListener(adapterPosition) }
+      var mLastClickTime: Long = 0
+      trash.setOnClickListener(object : View.OnClickListener {
+        override fun onClick(view: View) {
+          if (SystemClock.elapsedRealtime() - mLastClickTime < 1000)
+            return
+
+          clickListener(adapterPosition)
+          mLastClickTime = SystemClock.elapsedRealtime()
+
+        }
+      })
     }
   }
 }
